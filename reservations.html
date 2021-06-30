@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <title>Pacific Trails Resort :: Reservations Page</title>
+    <header>
+        <h1>Pacific Trails Resort</h1>
+    </header>
+
+    <meta name="viewport" content="device-width and sets the initial-scale to 1.0. ">
+    
+    <head>
+        <!—[if lt IE 9]>
+        <script src=http://html5shim.googlecode.com/svn/trunk/html5.js>
+        </script>
+        <![endif]-->
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["myEmail"].value;
+                if (x == "" || x == null) {
+                    alert("Email must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    
+    </head>
+
+    <link rel="stylesheet" href="pacific.css">
+ 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="yurts.html">Yurts</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+    </nav>
+    <main>
+        <body>
+            <div class ="reservation">
+                <h2>Reservations at Pacific Trails</h2>
+                <h3> Contact Us</h3>
+                <p>required information is marked with an asterisk(*)</p>
+        
+                <form name="myForm" action="http://webdevbasics.net/scripts/pacific.php" onsubmit="return validateForm()" method="POST" required>
+        
+                    <label>*First Name :</label>
+                        <input type="text" id="myFName" placeholder="Enter your first name" name="myFName" required>
+                    
+                    <label >*Last Name :</label>
+                        <input type="text" id="myLName" placeholder="Enter your last name" name="myLName" required>
+        
+                    <label>*E-mail :</label>
+                        <input type="email" id="myEmail" placeholder="For example : abc@gmail.com" name="myEmail" >
+        
+                    <label>*Phone :</label>
+                        <input type="tel" id="myPhone" size="20" maxlength="10" placeholder="Enter your number phone" name="myPhone">
+        
+                    <label>Calender</label>
+                        <input type="date" name="myDate">
+        
+                    <label>No of Stay</label>
+                        <input type="number" min ="1" max="5" name="myNumber">
+                        
+    
+                    <label>Comments
+                        <textarea name="myComments" id="" cols="20" rows="2"></textarea>
+                        <br>
+                        <input type="submit" value ="Submit" id="mySubmit">
+                    </label>
+                </form> 
+            </div>
+        </body>
+    </main>
+    <br>
+    <footer>
+        Copyright &copy; 2019 Pacific Trails Resort
+        <br>
+        <a href="">yourfirstname@yourlastname.com</a>
+    </footer>
+
+</html>
